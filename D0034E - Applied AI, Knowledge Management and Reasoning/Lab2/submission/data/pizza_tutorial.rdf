@@ -1,0 +1,1132 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial/"
+     xml:base="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:Lab2PizzaTutorial="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial">
+        <rdfs:comment>A tutorial ontology for the Pizza domain</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasBase -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasBase">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasIngredient"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#isBaseOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Pizza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PizzaBase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasIngredient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasIngredient">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#isIngredientOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasSpiciness -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasSpiciness"/>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasIngredient"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#isToppingOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Pizza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PizzaTopping"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#isBaseOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#isBaseOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#isIngredientOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#isIngredientOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#isIngredientOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#isMilderThan -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#isMilderThan">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#isSpicierThan"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Spiciness"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Spiciness"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#isSpicierThan -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#isSpicierThan">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Spiciness"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Spiciness"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#isToppingOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#isToppingOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#isIngredientOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasCaloricContent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasCaloricContent">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Pizza"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#AmericanaHotPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#AmericanaHotPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#NamedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#JalapenoPepperTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MozzarellaTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PepperoniTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#TomatoTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A pizza that only has Mozzarella, Tomato toppings, Pepperoni toppings and Jalapeno pepperoni toppings</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#AmericanaPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#AmericanaPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#NamedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MozzarellaTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PepperoniTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#TomatoTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A pizza that only has Mozzarella, Tomato toppings and Pepperoni toppings</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#AnchovyTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#AnchovyTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SeafoodTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#BasilTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#BasilTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#VegetableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#CaperTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#CaperTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#VegetableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#CheeseTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#CheeseTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#CheesyPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#CheesyPizza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Pizza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#CheeseTopping"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#CreamCheeseTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#CreamCheeseTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#CheeseTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#DeepPanBase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#DeepPanBase">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PizzaBase"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#ThinAndCrispyBase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#GarlicTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#GarlicTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#VegetableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#GreenPepperTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#GreenPepperTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PepperTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#HamTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#HamTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MeatTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#HighCaloriePizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#HighCaloriePizza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Pizza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasCaloricContent"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#InterestingPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#InterestingPizza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Pizza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PizzaTopping"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#JalapenoPepperTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#JalapenoPepperTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PepperTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasSpiciness"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Hot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#KebabMeatTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#KebabMeatTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MeatTopping"/>
+        <rdfs:comment>Beef</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#KebabPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#KebabPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#NamedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#BasilTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#CreamCheeseTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#JalapenoPepperTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#KebabMeatTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#KebabSauceTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MozzarellaTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#OreganoTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#RedOnionTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#TomatoTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Napolitan kebab pizza from the place slice pizza (Velijas favourite), has some tomato topping, mozzarella, cream cheese, oregano, red onions, jalapeno, kebab meat (beef), kebab sauce (medium spicieness.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#KebabSauceTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#KebabSauceTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SauceTopping"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasSpiciness"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Medium"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#LowCaloriePizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#LowCaloriePizza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Pizza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasCaloricContent"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MargheritaPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MargheritaPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#NamedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MozzarellaTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#TomatoTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MozzarellaTopping"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#TomatoTopping"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A pizza that only has Mozzarella and Tomato toppings</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MarinaraPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MarinaraPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#NamedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#BasilTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#GarlicTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#OliveOilTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#OreganoTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#ParmesanTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#TomatoTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Napolitan marinara pizza from the place slice pizza, has some tomato topping, garlic, oregano, basil, olive oil and parmesan.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MeatTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MeatTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MozzarellaTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MozzarellaTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#CheeseTopping"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#ParmesanTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MushroomTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MushroomTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#VegetableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#NamedPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#NamedPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#OilTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#OilTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#OliveOilTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#OliveOilTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#OilTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#OliveTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#OliveTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#VegetableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#OreganoTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#OreganoTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#VegetableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#ParmesanTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#ParmesanTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#CheeseTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PepperTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PepperTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#VegetableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PepperoniTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PepperoniTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MeatTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Pizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Pizza">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasBase"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PizzaBase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasCaloricContent"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PizzaBase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PizzaBase"/>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PizzaTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PizzaTopping"/>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PrawnTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PrawnTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SeafoodTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#RedOnionTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#RedOnionTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#VegetableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#RedPepperTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#RedPepperTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PepperTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SalamiPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SalamiPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#NamedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#BasilTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#CreamCheeseTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MozzarellaTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#OreganoTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SalamiTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#TomatoTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Napolitan salami pizza from the place slice pizza, has some tomato topping, mozzarella, cream cheese, basil, salami and oregano.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SalamiTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SalamiTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MeatTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SauceTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SauceTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SeafoodTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SeafoodTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SohoPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SohoPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#NamedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MozzarellaTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#OliveTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#ParmesanTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#TomatoTopping"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MozzarellaTopping"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#OliveTopping"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#ParmesanTopping"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#TomatoTopping"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A pizza that only has Mozzarella, Olives, parmesan and Tomato toppings</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Spiciness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Spiciness">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Hot"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Medium"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Mild"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SpicyBeefTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SpicyBeefTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MeatTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SpicyPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SpicyPizza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Pizza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasSpiciness"/>
+                                <owl:hasValue rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Hot"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#ThinAndCrispyBase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#ThinAndCrispyBase">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PizzaBase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#TomatoTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#TomatoTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#VegetableTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#TunaTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#TunaTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SeafoodTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#VegetableTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#VegetableTopping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#VegetarianPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#VegetarianPizza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Pizza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#hasTopping"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#CheeseTopping"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#VegetableTopping"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#AmericanaHotPizza1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#AmericanaHotPizza1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#AmericanaHotPizza"/>
+        <Lab2PizzaTutorial:hasCaloricContent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">450</Lab2PizzaTutorial:hasCaloricContent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#AmericanaPizza1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#AmericanaPizza1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#AmericanaPizza"/>
+        <Lab2PizzaTutorial:hasCaloricContent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">723</Lab2PizzaTutorial:hasCaloricContent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#CheesyPizza1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#CheesyPizza1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#CheesyPizza"/>
+        <Lab2PizzaTutorial:hasCaloricContent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">799</Lab2PizzaTutorial:hasCaloricContent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Hot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Hot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Spiciness"/>
+        <Lab2PizzaTutorial:isSpicierThan rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Medium"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MargheritaPizza1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MargheritaPizza1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MargheritaPizza"/>
+        <Lab2PizzaTutorial:hasCaloricContent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">263</Lab2PizzaTutorial:hasCaloricContent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MargheritaPizza2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MargheritaPizza2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MargheritaPizza"/>
+        <Lab2PizzaTutorial:hasCaloricContent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">340</Lab2PizzaTutorial:hasCaloricContent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MargheritaPizza3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MargheritaPizza3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MargheritaPizza"/>
+        <Lab2PizzaTutorial:hasCaloricContent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">312</Lab2PizzaTutorial:hasCaloricContent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MargheritaPizza4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MargheritaPizza4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MargheritaPizza"/>
+        <Lab2PizzaTutorial:hasCaloricContent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">301</Lab2PizzaTutorial:hasCaloricContent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MargheritaPizza5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MargheritaPizza5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MargheritaPizza"/>
+        <Lab2PizzaTutorial:hasCaloricContent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">289</Lab2PizzaTutorial:hasCaloricContent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MarinaraDeluxe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MarinaraDeluxe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MarinaraPizza"/>
+        <Lab2PizzaTutorial:hasCaloricContent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</Lab2PizzaTutorial:hasCaloricContent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Medium -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Medium">
+        <rdf:type rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Spiciness"/>
+        <Lab2PizzaTutorial:isSpicierThan rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Mild"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Mild -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Mild">
+        <rdf:type rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Spiciness"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SalamiLight -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SalamiLight">
+        <rdf:type rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SalamiPizza"/>
+        <Lab2PizzaTutorial:hasCaloricContent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</Lab2PizzaTutorial:hasCaloricContent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SohoPizza1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SohoPizza1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SohoPizza"/>
+        <Lab2PizzaTutorial:hasCaloricContent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">523</Lab2PizzaTutorial:hasCaloricContent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SpicyPizza1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SpicyPizza1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SpicyPizza"/>
+        <Lab2PizzaTutorial:hasCaloricContent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</Lab2PizzaTutorial:hasCaloricContent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#VelijasSpecial -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#VelijasSpecial">
+        <rdf:type rdf:resource="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#KebabPizza"/>
+        <Lab2PizzaTutorial:hasCaloricContent rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</Lab2PizzaTutorial:hasCaloricContent>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#AmericanaHotPizza"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#AmericanaPizza"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MargheritaPizza"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SohoPizza"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#AnchovyTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PrawnTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#TunaTopping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#CaperTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MushroomTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PepperTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#TomatoTopping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#CheeseTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#MeatTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SeafoodTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#VegetableTopping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#GreenPepperTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#JalapenoPepperTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#RedPepperTopping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#HamTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PepperoniTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SalamiTopping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#SpicyBeefTopping"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#Pizza"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PizzaBase"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/velijapovlakic/ontologies/2026/10/Lab2PizzaTutorial#PizzaTopping"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
